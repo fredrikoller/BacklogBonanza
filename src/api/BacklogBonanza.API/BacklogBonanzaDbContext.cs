@@ -11,7 +11,7 @@ namespace BacklogBonanza.API
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=tcp:backlog-bonanza.database.windows.net,1433;Initial Catalog=BacklogBonanzaDB;Persist Security Info=False;User ID=mugbugrug;Password=mvxa$9fjhEZm8fytb;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer(@"Server=tcp:backlog-bonanza.database.windows.net,1433;Initial Catalog=BacklogBonanzaDB;Persist Security Info=False;User ID={blablabla};Password={blablabla};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
