@@ -29,7 +29,14 @@ namespace BacklogBonanza.API.Services
 
         public void Delete(string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _repository.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex.InnerException);
+            }
         }
 
         public IEnumerable<Game> Get()
@@ -39,12 +46,27 @@ namespace BacklogBonanza.API.Services
 
         public Game Get(string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _repository.Get(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex.InnerException);
+            }
         }
 
         public Game Update(string id, Game obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _repository.Update(id, obj);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex.InnerException);
+            }
         }
     }
 
