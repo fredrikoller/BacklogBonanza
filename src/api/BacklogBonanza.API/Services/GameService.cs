@@ -58,7 +58,15 @@ namespace BacklogBonanza.API.Services
 
         public Game Update(string id, Game obj)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _repository.Update(id, obj);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex.InnerException);
+            }
         }
     }
 
